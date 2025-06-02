@@ -1,7 +1,11 @@
 ﻿<krpano version="1.22" title="Virtual Tour">
 
 	<include url="skin/vtourskin.xml" />
+
 	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<action autorun="onstart">
+    	set(layer[skin_layer].visible, false);
+	</action>
 	<skin_settings maps="false"
 	               maps_type="google"
 	               maps_bing_api_key=""
@@ -40,7 +44,7 @@
 	               layout_maxwidth="814"
 	               controlbar_width="-24"
 	               controlbar_height="40"
-	               controlbar_offset="-80"
+	               controlbar_offset="20"
 	               controlbar_offset_closed="-40"
 	               controlbar_overlap.no-fractionalscaling="10"
 	               controlbar_overlap.fractionalscaling="0"
@@ -70,16 +74,16 @@
 	
 
 	
-	<scene name="scene_SOT_Landing_2" title="SOT Landing 2" onstart="" thumburl="panos/SOT_Landing_2.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
+	<scene name="scene_SOT_Landing_drawing" title="SOT Landing drawing" onstart="" thumburl="panos/SOT_Landing_drawing.tiles/thumb.jpg" lat="" lng="" alt="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="90" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/SOT_Landing_2.tiles/preview.jpg" />
+		<preview url="panos/SOT_Landing_drawing.tiles/preview.jpg" />
 
 		<image>
-			<cube url="panos/SOT_Landing_2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1536,3072" />
+			<cube url="panos/SOT_Landing_drawing.tiles/%s/l%l/%0v/l%l_%s_%0v_%0h.jpg" multires="512,640,1280,2624,5248" />
 		</image>
 
 	</scene>
